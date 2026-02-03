@@ -3,175 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jollibee | Order Now</title>
+    <title>Jollibee Fan Site | Spreading Joy</title>
     <style>
+        /* Jollibee Brand Colors */
         :root {
             --jolly-red: #E31837;
             --jolly-yellow: #FFC72C;
             --white: #FFFFFF;
+            --dark: #231F20;
         }
 
         body {
-            font-family: 'Arial Rounded MT Bold', sans-serif;
+            font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
             margin: 0;
-            background-color: #fff5f5;
-            padding-bottom: 100px; /* Space for fixed cart */
+            background-color: #f9f9f9;
         }
 
-        header {
+        /* Navigation Bar */
+        nav {
             background-color: var(--jolly-red);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
+        nav .logo {
+            color: var(--white);
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--jolly-yellow);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            color: var(--jolly-red);
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+
+        /* Menu Grid */
         .menu-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
         }
 
         .menu-card {
-            background: white;
+            background: var(--white);
             border-radius: 15px;
-            padding: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border: 2px solid transparent;
-            transition: 0.3s;
         }
 
         .menu-card:hover {
-            border-color: var(--jolly-yellow);
+            transform: translateY(-10px);
         }
 
         .menu-card img {
             width: 100%;
-            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .price {
-            font-size: 1.2rem;
+        .menu-card h3 {
             color: var(--jolly-red);
-            font-weight: bold;
+            margin: 15px 0 5px 0;
+        }
+
+        .menu-card p {
+            color: #666;
+            font-size: 0.9rem;
+            padding: 0 10px 15px 10px;
         }
 
         .order-btn {
-            background: var(--jolly-red);
+            background-color: var(--jolly-red);
             color: white;
-            border: none;
             padding: 10px 20px;
+            border: none;
             border-radius: 20px;
             cursor: pointer;
+            margin-bottom: 20px;
             font-weight: bold;
-            width: 100%;
         }
 
-        .order-btn:active {
-            transform: scale(0.95);
-        }
-
-        /* Floating Cart UI */
-        .cart-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--jolly-yellow);
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
-            z-index: 100;
-        }
-
-        .checkout-btn {
-            background: var(--jolly-red);
+        footer {
+            background: var(--dark);
             color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>🐝 Jollibee Kiosk</h1>
-    <p>Tap to add your favorites!</p>
-</header>
+    <nav>
+        <a href="#" class="logo">JOLLIBEE</a>
+        <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Promos</a></li>
+            <li><a href="#">Delivery</a></li>
+        </ul>
+    </nav>
 
-<div class="menu-container">
-    <div class="menu-card">
-        <img src="https://via.placeholder.com/200x150?text=Chickenjoy" alt="Chicken">
-        <h3>1pc Chickenjoy</h3>
-        <p class="price">₱95.00</p>
-        <button class="order-btn" onclick="addToCart('Chickenjoy', 95)">Add to Cart</button>
-    </div>
+    <header class="hero">
+        <h1>Bida ang Saya!</h1>
+        <p>Bringing the joy of eating to everyone.</p>
+    </header>
 
-    <div class="menu-card">
-        <img src="https://via.placeholder.com/200x150?text=Spaghetti" alt="Spaghetti">
-        <h3>Jolly Spaghetti</h3>
-        <p class="price">₱60.00</p>
-        <button class="order-btn" onclick="addToCart('Jolly Spaghetti', 60)">Add to Cart</button>
-    </div>
+    <section class="menu-container">
+        <div class="menu-card">
+            <img src="https://via.placeholder.com/300x200?text=Chickenjoy" alt="Chickenjoy">
+            <h3>Chickenjoy</h3>
+            <p>Our signature crispy and juicy fried chicken.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
 
-    <div class="menu-card">
-        <img src="https://via.placeholder.com/200x150?text=Peach+Mango+Pie" alt="Pie">
-        <h3>Peach Mango Pie</h3>
-        <p class="price">₱45.00</p>
-        <button class="order-btn" onclick="addToCart('Peach Mango Pie', 45)">Add to Cart</button>
-    </div>
-</div>
+        <div class="menu-card">
+            <img src="https://via.placeholder.com/300x200?text=Jolly+Spaghetti" alt="Jolly Spaghetti">
+            <h3>Jolly Spaghetti</h3>
+            <p>Sweet-style spaghetti with ham and hotdog slices.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
 
-<div class="cart-bar">
-    <div>
-        <strong>Items in Cart:</strong> <span id="cart-count">0</span><br>
-        <strong>Total:</strong> ₱<span id="cart-total">0.00</span>
-    </div>
-    <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
-</div>
+        <div class="menu-card">
+            <img src="https://via.placeholder.com/300x200?text=Yumburger" alt="Yumburger">
+            <h3>Yumburger</h3>
+            <p>The classic burger with our special dressing.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
+    </section>
 
-<script>
-    // The "Logic"
-    let cart = [];
-    let total = 0;
-
-    function addToCart(itemName, price) {
-        // 1. Add item to our data list
-        cart.push(itemName);
-        
-        // 2. Update the total price
-        total += price;
-
-        // 3. Update the Screen (DOM)
-        document.getElementById('cart-count').innerText = cart.length;
-        document.getElementById('cart-total').innerText = total.toFixed(2);
-        
-        console.log("Added " + itemName + ". Cart is now: ", cart);
-    }
-
-    function checkout() {
-        if (cart.length === 0) {
-            alert("Your cart is empty! Order some Chickenjoy first.");
-        } else {
-            alert("Order Received! \n\nItems: " + cart.join(", ") + "\nTotal: ₱" + total.toFixed(2) + "\n\nBida ang saya!");
-            
-            // Clear cart after checkout
-            cart = [];
-            total = 0;
-            document.getElementById('cart-count').innerText = "0";
-            document.getElementById('cart-total').innerText = "0.00";
-        }
-    }
-</script>
+    <footer>
+        <p>&copy; 2026 Fan Project - Inspired by Jollibee Foods Corporation</p>
+    </footer>
 
 </body>
 </html>
