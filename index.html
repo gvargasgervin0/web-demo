@@ -1,10 +1,101 @@
-<DOCTYOE html>
-  <html>
-    <head>
-      <title>My Frst Website</title>
-    </head>
-    <body>
-      <h1>Hello, Web</h1>
-        <p>This site is live.</p>
-    </body>
-  </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        /* CSS: This makes it look pretty */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #34495e;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #c0392b;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Space</h1>
+        <p>A simple website built from scratch.</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container" id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm learning how to code websites. This layout uses <strong>HTML5</strong> for structure and <strong>CSS3</strong> for the design.</p>
+        <button class="btn" onclick="sayHello()">Click for a Surprise</button>
+    </div>
+
+    <div class="container" id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li><strong>Project Alpha:</strong> A cool data experiment.</li>
+            <li><strong>Project Beta:</strong> An app that tracks coffee intake.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Website Inc. | Built with Gemini</p>
+    </footer>
+
+    <script>
+        // JavaScript: This adds the "brain"
+        function sayHello() {
+            alert("Thanks for visiting my site! Keep exploring.");
+        }
+    </script>
+
+</body>
+</html>
