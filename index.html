@@ -3,174 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jollibee Fan Site | Spreading Joy</title>
+    <title>Student Portal</title>
     <style>
-        /* Jollibee Brand Colors */
-        :root {
-            --jolly-red: #E31837;
-            --jolly-yellow: #FFC72C;
-            --white: #FFFFFF;
-            --dark: #231F20;
-        }
-
-        body {
-            font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: var(--jolly-red);
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        nav .logo {
-            color: var(--white);
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: var(--jolly-yellow);
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .hero h1 {
-            color: var(--jolly-red);
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--dark);
-        }
-
-        /* Menu Grid */
-        .menu-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .menu-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-align: center;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .menu-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .menu-card h3 {
-            color: var(--jolly-red);
-            margin: 15px 0 5px 0;
-        }
-
-        .menu-card p {
-            color: #666;
-            font-size: 0.9rem;
-            padding: 0 10px 15px 10px;
-        }
-
-        .order-btn {
-            background-color: var(--jolly-red);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
+        /* Konting basic styling para hindi magulo tingnan */
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; }
+        header, nav, main, section, footer { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; }
+        form div { margin-bottom: 10px; }
+        label { display: inline-block; width: 150px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        table, th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
     </style>
 </head>
 <body>
 
+    <header>
+        <h1>Student Portal</h1>
+    </header>
+
     <nav>
-        <a href="#" class="logo">JOLLIBEE</a>
         <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Promos</a></li>
-            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="hero">
-        <h1>Bida ang Saya!</h1>
-        <p>Bringing the joy of eating to everyone.</p>
-    </header>
+    <main>
+        <section>
+            <h2>Student Registration Form</h2>
+            <form action="#">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-    <section class="menu-container">
-        <div class="menu-card">
-            <img src="https://via.placeholder.com/300x200?text=Chickenjoy" alt="Chickenjoy">
-            <h3>Chickenjoy</h3>
-            <p>Our signature crispy and juicy fried chicken.</p>
-            <button class="order-btn">Order Now</button>
-        </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-        <div class="menu-card">
-            <img src="https://via.placeholder.com/300x200?text=Jolly+Spaghetti" alt="Jolly Spaghetti">
-            <h3>Jolly Spaghetti</h3>
-            <p>Sweet-style spaghetti with ham and hotdog slices.</p>
-            <button class="order-btn">Order Now</button>
-        </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
 
-        <div class="menu-card">
-            <img src="https://via.placeholder.com/300x200?text=Yumburger" alt="Yumburger">
-            <h3>Yumburger</h3>
-            <p>The classic burger with our special dressing.</p>
-            <button class="order-btn">Order Now</button>
-        </div>
-    </section>
+                <div>
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div>
+
+                <div>
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" style="width: auto;">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" style="width: auto;">Female</label>
+                </div>
+
+                <div>
+                    <label for="course">Course:</label>
+                    <select id="course" name="course">
+                        <option value="it">Information Technology</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="is">Information Systems</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement" style="width: auto;">I agree to the terms and conditions</label>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Student Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luffy D. Monkey</td>
+                        <td>BSIT</td>
+                        <td>1st Year</td>
+                    </tr>
+                    <tr>
+                        <td>Roronoa Zoro</td>
+                        <td>BSIT</td>
+                        <td>2nd Year</td>
+                    </tr>
+                    <tr>
+                        <td>Nami Swan</td>
+                        <td>BSIS</td>
+                        <td>3rd Year</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Fan Project - Inspired by Jollibee Foods Corporation</p>
+        <p>&copy; 2026 Student Portal System | Philippines</p>
     </footer>
 
 </body>
