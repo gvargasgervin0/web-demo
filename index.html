@@ -3,129 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portal</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 20px; }
-        header, nav, main, section, footer { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; }
-        form div { margin-bottom: 10px; }
-        label { display: inline-block; width: 150px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        table, th, td { border: 1px solid black; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-    </style>
+    <title>IT101 - Responsive Webpage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Student Portal</h1>
+        <h1>Welcome to My Project</h1>
+        <p>1st Year IT Student - Section A</p>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
     </nav>
 
     <main>
-        <section>
-            <h2>Student Registration Form</h2>
-            <form action="#">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="card-container">
+            
+            <section class="card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3>Web Development</h3>
+                    <p>Learning the fundamentals of HTML, CSS, and how to make layouts responsive.</p>
+                    <button class="btn">View Details</button>
                 </div>
+            </section>
 
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+            <section class="card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3>UI/UX Design</h3>
+                    <p>Understanding user experience through clean layout and proper spacing techniques.</p>
+                    <button class="btn">View Details</button>
                 </div>
+            </section>
 
-                <div>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+            <section class="card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3>Responsive Media</h3>
+                    <p>Using media queries to adapt designs across mobile and desktop devices.</p>
+                    <button class="btn">View Details</button>
                 </div>
+            </section>
 
-                <div>
-                    <label for="birthdate">Birthdate:</label>
-                    <input type="date" id="birthdate" name="birthdate">
-                </div>
-
-                <div>
-                    <label>Gender:</label>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male" style="width: auto;">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female" style="width: auto;">Female</label>
-                </div>
-
-                <div>
-                    <label for="course">Course:</label>
-                    <select id="course" name="course">
-                        <option value="it">Information Technology</option>
-                        <option value="cs">Computer Science</option>
-                        <option value="is">Information Systems</option>
-                    </select>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="agreement" name="agreement" required>
-                    <label for="agreement" style="width: auto;">I agree to the terms and conditions</label>
-                </div>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-        <section>
-            <h2>Student Records</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Course</th>
-                        <th>Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Luffy D. Monkey</td>
-                        <td>BSIT</td>
-                        <td>1st Year</td>
-                    </tr>
-                    <tr>
-                        <td>Roronoa Zoro</td>
-                        <td>BSIT</td>
-                        <td>2nd Year</td>
-                    </tr>
-                    <tr>
-                        <td>Nami Swan</td>
-                        <td>BSIT</td>
-                        <td>3rd Year</td>
-                    </tr>
-                    <tr>
-                        <td>Psyche</td>
-                        <td>BSCS</td>
-                        <td>1ST Year</td>
-                    </tr>
-                    <tr>
-                        <td>Chopper</td>
-                        <td>BSCS</td>
-                        <td>2nd Year</td>
-                    </tr>
-                    <tr>
-                        <td>Robin</td>
-                        <td>BSIT</td>
-                        <td>3rd Year</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Student Portal System | Philippines</p>
+        <p>Created by: [Your Name Here] | IT Department &copy; 2026</p>
     </footer>
 
 </body>
